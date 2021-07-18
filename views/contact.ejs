@@ -1,0 +1,51 @@
+<%- include('partial/header.ejs') %>
+<div class="container">
+  <% if ( sessionFlash && sessionFlash.message) { %>
+    <div class="alert alert-<%= sessionFlash.type %> alert-dismissible fade show text-center">
+      <strong>Success</strong> <%= sessionFlash.message %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+    <div class="row my-5 border border-warning py-2">
+        <div class="col">
+         <div class="d-flex contact-form"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.963933331384!2d102.97003755066973!3d13.599015090399588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311ae7d1729a0177%3A0x3f27413991d484f7!2sCodeStar%20Academy%20-%20Sisophon!5e0!3m2!1sen!2skh!4v1622046165802!5m2!1sen!2skh" width="660" height="530" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+         </div>
+            </div>
+        <div class="col">
+            <div class="col-sm ">
+                <form action="/contact" method="POST" class="contact-form">
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" placeholder="your name" name="fullName" class="form-control" id="exampleInputPassword1" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="Email1" class="form-label">Email address</label>
+                    <input type="email" placeholder="example@email.com" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="Telephone" class="form-label">Phnone</label>
+                    <input type="phone" name="phone" placeholder="012345678" class="form-control" id="validationDefault01" aria-describedby="phone help" >
+                    <div id="emailHelp" class="form-text">We'll never share your Phone with anyone else.</div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="messages" class="form-label">Write us</label>
+                    <textarea class="form-control" name="message" id="text-area" rows="5" placeholder="type your message here" required></textarea>
+                  </div>
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-danger">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container text-center">    
+    <h2>CodeStar Academy - Sisophon</h2>
+    <p><i class="fas fa-school" style="font-size: 1.5rem;"> Adress: </i> Road N- 4, Sisophon, <b>Cambodia</b></p>
+    <p><i class="fas fa-envelope" style="font-size: 1.5rem;"> E-mail: </i>contact@codestarcambodia.tech</p>
+    <p><i class="fas fa-mobile-alt" style="font-size: 1.5rem;"> Mobile: </i> 0882261016</p>    
+</div>
+<%- include('partial/footer.ejs') %>

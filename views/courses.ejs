@@ -1,0 +1,125 @@
+<%- include('partial/header.ejs') %>
+<div class="container full h-100 " style="height: 100vh;">
+  <% if ( sessionFlash && sessionFlash.message) { %>
+    <div class="alert alert-<%= sessionFlash.type %> alert-dismissible fade show text-center">
+      <strong>Wrong</strong> <%= sessionFlash.message %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <% } %>
+    <div class="row align-items-center h-100">
+        <div class="col-6 mx-auto">
+            <div class="card h-100 border-primary justify-content-center">
+                <div class="d-flex justify-content-around">
+                  <i class="fas fa-user-lock display-3"></i>
+                  <span class="text-danger"> unlock course contents:
+                    <form action="/courses" method="POST"> 
+                    <input type="text" name="student"class="input-group input-group-sm mb-3" placeholder="student-ID" >
+                    <button type="submit" class="btn btn-info"><i class="fas fa-key"></i>Unlock</button>
+                  </form>
+                  </span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- other courses-->
+<div class="container">
+<h2 class="text-center mt-5">COURSES IN HIGH DEMAND</h2>
+<div class="row row-cols-1 row-cols-md-4 g-4 p-3">
+  
+  <div class="col-md-6">
+    <div class="card h-100">
+      <img src="/public/images/frontend-mastery.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Learn Front-end Mastery</h5>
+        <p class="card-text">Join one of the most sought after courses, after learning front end development, endless doors to IT companies will open for you. Companies require Front end developers & they are ready to pay handsomely if you got the skills. Hone your skills with us.</p>
+      </div>
+      <div class="d-flex justify-content-around">
+        <h3>$ 100</h3>
+        <p>4 Weeks <i class="fas fa-calendar-week"></i></p>
+      </div>
+      <div class="card-footer d-grid">
+        <a href="/register" class="btn btn-warning" type="submit">Register today!</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <div class="card h-100">
+      <img src="/public/images/bootstrap.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"> Become BootStrap Professional</h5>
+        <p class="card-text">Bootstrap is the most popular responsive framework in the world. Gain a good understanding of the following concepts with this course: What Bootstrap 5 is?  How to develop websites using Bootstrap & a responsive design philosophy. Features of the Bootstrap language. Coding semantics. Application programming. Website programming. </p>
+      </div>
+      <div class="d-flex justify-content-around">
+        <h3>$ 75</h3>
+        <p>3 Weeks <i class="fas fa-calendar-week"></i></p>
+      </div>
+      <div class="card-footer d-grid">
+        <a href="/register" class="btn btn-warning">Register today!</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card h-100">
+      <img src="/public/images/nodejs.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Learn Back-end Development</h5>
+        <p class="card-text">Our course is practical oriented. The trainers are experienced programmers currently working on projects of Node.JS. 80% of the course would be practical, the rest theory. As such you would be given assignments on every topic.</p>
+      </div>
+      <div class="d-flex justify-content-around">
+        <h3>$ 175</h3>
+        <p>9 Weeks <i class="fas fa-calendar-week"></i></p>
+      </div>
+      <div class="card-footer d-grid">
+        <a href="/register" class="btn btn-warning">Register today!</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card h-100">
+      <img src="/public/images/react.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"> Become React Ninja</h5>
+        <p class="card-text">ReactJS offers graceful solutions to some of front-end programming's most persistent issues, allowing you to build dynamic and interactive web apps with ease. It's fast, scalable, flexible, powerful, and has a robust developer community that's rapidly growing. There's never been a better time to learn React.</p>
+      </div>
+      <div class="d-flex justify-content-around">
+        <h3>$ 110</h3>
+        <p>6 Week <i class="fas fa-calendar-week"></i></p>
+      </div>
+      <div class="card-footer d-grid">
+        <a href="/register" class="btn btn-warning">Register today!</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!--bootcamp banner-->
+<h2 class="text-center mt-5">BEST VALUE COURSE</h2>
+<div class="container d-flex">
+  <div class="card mb-3" >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="/public/images/cardimage1.jpg" alt="course bootcamp" style="width: 100%;">
+        <img style="position: absolute; top: 0; left: 0; width:150px;"  src="/public/images/images.png" alt="">
+        </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">The Complete Web-development Bootcamp- 2021</h5>
+          <p class="card-text"><b class="mb-2">Become a fullstack web developer (and get a job) by taking this ONE course, even if you've never coded before.</b>
+            Fullstack is one of the longest-running and most successful coding bootcamps in the World. Its graduates are equipped to succeed in the professional world through Fullstack's foundational teaching method, which allows students to thrive in their first job and every job after.
+          </p>
+                  </div>
+        <div class="d-flex justify-content-around">
+          <h3>$ 150 /-Only.</h3>
+          <p>12 Weeks <i class="fas fa-calendar-week"></i></p>
+        </div>
+        <div class="card-footer d-grid">
+          <a href="/syllabus" class="btn btn-warning">Go to Course Syllabus</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<%- include('partial/footer.ejs') %>
